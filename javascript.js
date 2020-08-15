@@ -6,6 +6,7 @@ const jump = () => {
     if(karakter.classList == 'animasi'){return}
     karakter.classList.add('animasiKarakter')
     rintangan.classList.add('animasiRintangan')
+    start.classList.remove('play-again')
     setTimeout(function removeJump(){
         karakter.classList.remove('animasiKarakter')
     }, 300)
@@ -23,6 +24,3 @@ const gameOver = () => {
 
 document.addEventListener('click', jump)
 setInterval(gameOver, 10)
-start.addEventListener('click', () => {
-    start.classList.remove('play-again')
-})
